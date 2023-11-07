@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Gambar;
+use App\Models\Sekolah;
 use App\Http\Requests\StoreGambarRequest;
 use App\Http\Requests\UpdateGambarRequest;
+use Illuminate\Support\Str;
+use File;
 
 class GambarController extends Controller
 {
@@ -13,7 +16,11 @@ class GambarController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.gambar.index', [
+            'active' => 'gambar',
+            'call' => 'Foto Penelitian',
+            'gambars' => Gambar::orderBy('id_sekolah', 'desc')->get(),
+        ]);
     }
 
     /**
@@ -21,7 +28,11 @@ class GambarController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.gambar.create', [
+            'active' => 'gambar',
+            'call' => 'Foto Penelitian',
+            'sekolahs' => Sekolah::get(),
+        ]);
     }
 
     /**
@@ -29,7 +40,14 @@ class GambarController extends Controller
      */
     public function store(StoreGambarRequest $request)
     {
-        //
+        $validated = $request->validated();
+        $validated['file'] = $request->file('file');
+        $file = $validated['file']; // Mengambil objek file yang diunggah
+        $extension = $file->getClientOriginalExtension();
+        $validated['file']->move(public_path() . '/teknis/', $img = 'img_' . Str::random(15) . '.' . $extension);
+        $validated['file'] = 'teknis/' . $img;
+        Gambar::create($validated);
+        return redirect('/dashboard/gambar')->with('success', 'Gambar telah ditambahkan!');
     }
 
     /**
@@ -61,6 +79,8 @@ class GambarController extends Controller
      */
     public function destroy(Gambar $gambar)
     {
-        //
+        File::delete($gambar['file']);
+        Gambar::destroy($gambar->id);
+        return redirect('/dashboard/gambar')->with('success', 'Foto Penelitian telah dihapus!');
     }
 }

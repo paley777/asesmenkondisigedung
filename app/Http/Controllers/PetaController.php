@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Peta;
+use App\Models\Sekolah;
 use App\Http\Requests\StorePetaRequest;
 use App\Http\Requests\UpdatePetaRequest;
+use Illuminate\Support\Str;
+use File;
 
 class PetaController extends Controller
 {
@@ -13,7 +16,11 @@ class PetaController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.peta.index', [
+            'active' => 'peta',
+            'call' => 'Pemetaan 3D',
+            'petas' => Peta::orderBy('id_sekolah', 'desc')->get(),
+        ]);
     }
 
     /**
@@ -21,7 +28,11 @@ class PetaController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.peta.create', [
+            'active' => 'peta',
+            'call' => 'Pemetaan 3D',
+            'sekolahs' => Sekolah::get(),
+        ]);
     }
 
     /**
@@ -29,7 +40,14 @@ class PetaController extends Controller
      */
     public function store(StorePetaRequest $request)
     {
-        //
+        $validated = $request->validated();
+        $validated['file'] = $request->file('file');
+        $file = $validated['file']; // Mengambil objek file yang diunggah
+        $extension = $file->getClientOriginalExtension();
+        $validated['file']->move(public_path() . '/peta/', $img = 'img_' . Str::random(15) . '.' . $extension);
+        $validated['file'] = 'peta/' . $img;
+        Peta::create($validated);
+        return redirect('/dashboard/peta')->with('success', 'Pemetaan 3D telah ditambahkan!');
     }
 
     /**
@@ -59,8 +77,10 @@ class PetaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Peta $peta)
+    public function destroy(Peta $petum)
     {
-        //
+        File::delete($petum['file']);
+        Peta::destroy($petum->id);
+        return redirect('/dashboard/peta')->with('success', 'Pemetaan 3D telah dihapus!');
     }
 }

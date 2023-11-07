@@ -29,6 +29,12 @@
                 <li class="nav-item"><a class="nav-link {{ $active === 'olah_data' ? 'active' : '' }}"
                         data-bss-hover-animate="pulse" href="/dashboard/sekolah">Data Sekolah</a>
                 </li>
+                <li class="nav-item"><a class="nav-link {{ $active === 'gambar' ? 'active' : '' }}"
+                        data-bss-hover-animate="pulse" href="/dashboard/gambar">Foto Penelitian</a>
+                </li>
+                <li class="nav-item"><a class="nav-link {{ $active === 'peta' ? 'active' : '' }}"
+                        data-bss-hover-animate="pulse" href="/dashboard/peta">Pemetaan 3D</a>
+                </li>
                 <li class="nav-item">
                     <form action="/logout" method="post">
                         @csrf

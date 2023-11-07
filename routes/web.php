@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SekolahController;
+use App\Http\Controllers\GambarController;
+use App\Http\Controllers\PetaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +34,5 @@ Route::post('/logout', [DashboardController::class, 'logout'])->middleware('auth
 //Dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 Route::resource('/dashboard/sekolah', SekolahController::class)->middleware('auth');
+Route::resource('/dashboard/gambar', GambarController::class)->middleware('auth');
+Route::resource('/dashboard/peta', PetaController::class)->middleware('auth');
