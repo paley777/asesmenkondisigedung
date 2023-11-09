@@ -21,7 +21,10 @@ class KecamatanController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.kecamatan.create', [
+            'active' => 'olah_data',
+            'call' => 'Olah Data',
+        ]);
     }
 
     /**
@@ -29,7 +32,9 @@ class KecamatanController extends Controller
      */
     public function store(StoreKecamatanRequest $request)
     {
-        //
+        $validated = $request->validated();
+        Kecamatan::create($validated);
+        return redirect('/dashboard/sekolah')->with('success', 'Kecamatan telah ditambahkan!');
     }
 
     /**
@@ -61,6 +66,7 @@ class KecamatanController extends Controller
      */
     public function destroy(Kecamatan $kecamatan)
     {
-        //
+        Kecamatan::destroy($kecamatan->id);
+        return redirect('/dashboard/sekolah')->with('success', 'Kecamatan telah dihapus!');
     }
 }

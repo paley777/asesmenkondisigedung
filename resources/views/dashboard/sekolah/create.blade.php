@@ -32,8 +32,7 @@
             <h2 style="color:#24285b;"><b>Data Teknis Sekolah</b></h2>
             <hr style="border: 1px solid #24285b;
         border-radius: 5px;">
-            <form class="row g-2" method="post" action="/dashboard/sekolah/{{ $sekolah->id }}">
-                @method('put')
+            <form class="row g-2" method="post" action="/dashboard/sekolah">
                 @csrf
                 <div class="col-md-6 position-relative">
                     <label for="validationCustom01" class="form-label ">Nama Kecamatan<span
@@ -49,20 +48,20 @@
                     <label for="validationCustom01" class="form-label ">Nama Sekolah<span
                             class="text-danger">*</span></label>
                     <input type="text" id="validationCustom01" class="form-control" name="nama_sekolah"
-                        value="{{ old('nama_sekolah', $sekolah->nama_sekolah) }}" placeholder="Isi Nama Sekolah" required>
+                        placeholder="Isi Nama Sekolah" required>
                 </div>
                 <div class="col-md-12 position-relative">
                     <label for="validationCustom01" class="form-label ">Data Teknis<span
                             class="text-danger">*</span></label>
                     <textarea id="editor" name="data_teknis">
-                              {{ $sekolah->data_teknis }}
+                             
                                 </textarea>
                 </div>
                 <div class="col-md-12 position-relative">
                     <label for="validationCustom01" class="form-label ">Tabel Tingkat Kerusakan<span
                             class="text-danger">*</span></label>
                     <textarea id="editor1" name="tabel">
-                              {{ $sekolah->tabel }}
+                          
                                 </textarea>
                 </div>
                 <p>
@@ -78,7 +77,7 @@
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             </path>
                         </g>
-                    </svg> Ubah Data
+                    </svg> Simpan Data
                 </button>
             </form>
     </section>

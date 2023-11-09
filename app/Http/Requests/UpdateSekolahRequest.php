@@ -24,6 +24,7 @@ class UpdateSekolahRequest extends FormRequest
     {
         return [
             'nama_sekolah' => 'required',
+            'nama_kec' => 'required',
             'data_teknis' => 'required',
             'tabel' => 'required',
         ];

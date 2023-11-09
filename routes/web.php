@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SekolahController;
 use App\Http\Controllers\GambarController;
 use App\Http\Controllers\PetaController;
+use App\Http\Controllers\KecamatanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,4 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('aut
 Route::resource('/dashboard/sekolah', SekolahController::class)->middleware('auth');
 Route::resource('/dashboard/gambar', GambarController::class)->middleware('auth');
 Route::resource('/dashboard/peta', PetaController::class)->middleware('auth');
+Route::resource('/dashboard/kecamatan', KecamatanController::class)->middleware('auth');
