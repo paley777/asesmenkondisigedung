@@ -1,66 +1,99 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 align="center" id="title">Situs Informasi Asesmen Kondisi Bangunan Gedung Sekolah</h1>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<p align="center"><img src="https://socialify.git.ci/paley777/asesmenkondisigedung/image?description=1&amp;descriptionEditable=Situs%20informasi%20hasil%20asesmen%20kondisi%20bangunan%20gedung%20sekolah%20dasar%20di%20Kecamatan%20Teluk%20Segara%20dan%20Kecamatan%20Ratu%20Samban.&amp;font=Inter&amp;language=1&amp;logo=https%3A%2F%2Fi.ibb.co%2F92PvDmh%2Flogo-unib-e1571906638799.png&amp;name=1&amp;owner=1&amp;pattern=Circuit%20Board&amp;theme=Light" alt="project-image"></p>
 
-## About Laravel
+<p id="description">Situs informasi hasil asesmen kondisi bangunan gedung sekolah dasar di Kecamatan Teluk Segara dan Kecamatan Ratu Samban Kota Bengkulu Provinsi Bengkulu. Situs ini membuat dokumentasi kondisi bangunan tiap sekolah dengan dilengkapi gambar data teknis tabel tingkat kerusakan dan citra 3D.</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center"><img src="https://github.com/paley777/asesmenkondisigedung/actions/workflows/php.yml/badge.svg" alt="shields"></p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<h2>🚀 Demo</h2>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+[http://asesmenkondisigedung.com/](http://asesmenkondisigedung.com/)
 
-## Learning Laravel
+<h2>Project Screenshots:</h2>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<img src="https://i.ibb.co/ncDLP53/image.png" alt="project-screenshot" width="400" height="400/">
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<img src="https://i.ibb.co/BywcXX5/image.png" alt="project-screenshot" width="400" height="400/">
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<img src="https://i.ibb.co/QP3MCGN/image.png" alt="project-screenshot" width="400" height="400/">
 
-## Laravel Sponsors
+  
+  
+<h2>🧐 Features</h2>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Here're some of the project's best features:
 
-### Premium Partners
+*   Manajemen Data Teknis Sekolah
+*   Manajemen Kecamatan
+*   CRUD Data
+*   Manajemen Foto Penelitian
+*   Manajemen Pemetaan 3D
+*   WYSIWYG Laravel text editor
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+<h2>🛠️ Installation Steps:</h2>
 
-## Contributing
+<p>1. Clone the project</p>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```
+gh repo clone paley777/asesmenkondisigedung
+```
 
-## Code of Conduct
+<p>2. Go to the project directory</p>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
+cd asesmenkondisigedung
+```
 
-## Security Vulnerabilities
+<p>3. Install dependencies</p>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```
+composer install
+```
 
-## License
+<p>4. Delete Cache</p>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+php artisan cache:clear
+```
+
+<p>5. Generate Laravel Key</p>
+
+```
+php artisan key:generate
+```
+
+<p>6. Make Storage Link</p>
+
+```
+php artisan storage:link
+```
+
+<p>7. Migrate</p>
+
+```
+php artisan migrate
+```
+
+<p>8. Start the server</p>
+
+```
+php artisan serve
+```
+
+  
+  
+<h2>💻 Built with</h2>
+
+Technologies used in the project:
+
+*   Laravel 9.11
+*   PHP 8.0.2
+
+<h2>🛡️ License:</h2>
+
+This project is licensed under the Direktorat Jenderal Kekayaan Intelektual Kementerian Hukum dan Hak Asasi Manusia Republik Indonesia
+
+<h2>💖Like my work?</h2>
+
+Saran pengembangan silakan hubungi email berikut:<p>valleryan1212@gmail.com</p>
