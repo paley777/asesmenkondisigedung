@@ -10,7 +10,8 @@
     }
 </style>
 <nav class="navbar navbar-expand-md fixed-top bg-primary navbar-shrink py-3 navbar-dark" id="mainNav">
-    <div class="container"><a class="navbar-brand d-flex align-items-center" href="/dashboard">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="/dashboard">
             <div class="logo-container">
                 <img src="{{ URL::asset('images/logo.png') }}" width="64" height="64" class="card-img-top"
                     alt="Logo Universitas Bengkulu">
