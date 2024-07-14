@@ -1,8 +1,8 @@
-<h1 align="center" id="title">Situs Informasi Asesmen Kondisi Bangunan Gedung Sekolah</h1>
+<h1 align="center" id="title">School Building Condition Assessment Information Site</h1>
 
 <p align="center"><img src="https://socialify.git.ci/paley777/asesmenkondisigedung/image?description=1&amp;descriptionEditable=Situs%20informasi%20hasil%20asesmen%20kondisi%20bangunan%20gedung%20sekolah%20dasar%20di%20Kecamatan%20Teluk%20Segara%20dan%20Kecamatan%20Ratu%20Samban.&amp;font=Inter&amp;language=1&amp;logo=https%3A%2F%2Fi.ibb.co%2F92PvDmh%2Flogo-unib-e1571906638799.png&amp;name=1&amp;owner=1&amp;pattern=Circuit%20Board&amp;theme=Light" alt="project-image"></p>
 
-<p id="description">Situs informasi hasil asesmen kondisi bangunan gedung sekolah dasar di Kecamatan Teluk Segara dan Kecamatan Ratu Samban Kota Bengkulu Provinsi Bengkulu. Situs ini membuat dokumentasi kondisi bangunan tiap sekolah dengan dilengkapi gambar data teknis tabel tingkat kerusakan dan citra 3D.</p>
+<p id="description">Information site on the results of assessments of the condition of elementary school buildings in Teluk Segara District and Ratu Samban District, Bengkulu City, Bengkulu Province. This site provides documentation of the condition of each school's buildings, complete with technical data, tables of damage levels and 3D images.</p>
 
 <p align="center"><img src="https://github.com/paley777/asesmenkondisigedung/actions/workflows/php.yml/badge.svg" alt="shields"></p>
 
@@ -96,4 +96,4 @@ This project is licensed under the Direktorat Jenderal Kekayaan Intelektual Keme
 
 <h2>💖Like my work?</h2>
 
-Saran pengembangan silakan hubungi email berikut:<p>valleryan1212@gmail.com</p>
+For development suggestions please contact the following email:<p>valleryan1212@gmail.com</p>
